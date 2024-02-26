@@ -1,0 +1,140 @@
+/*** CANCEL ***/
+html, body, main { width: 100%; height: 100%; }
+/*** END CANCEL ***/
+
+/*** Z-INDEXES ***/
+.welcome-bg { position: relative; z-index: 10; }
+.welcome-wrap { position: relative; z-index: 20; }
+
+.welcome-samples-img.is-product2,
+.welcome-samples-img.is-product3 { position: relative; z-index: 30; }
+.welcome-samples-img.is-product1 { position: relative; z-index: 40; }
+/*** END Z-INDEXES ***/
+
+/*** COLORS ***/
+html, body, main,
+.welcome { background-color: #eee; }
+.welcome-links-a,
+.welcome-footer { color: #eee; }
+
+.welcome-links-a,
+.welcome-footer { background-color: rgba(0, 0, 0, .9); }
+.welcome-title { color: rgba(0, 0, 0, .9); }
+
+.welcome { border-color: rgba(0, 0, 0, .7); }
+/*** END COLORS ***/
+
+/*** FONTS ***/
+@font-face{ font-family: "TribalTimes"; src: url("../../assets/fonts/TribalTimes.ttf"); }
+@font-face{ font-family: "Impact"; src: url("../../assets/fonts/Impact.ttf"); }
+
+* { font-family: "Impact", sans-serif; word-spacing: .15em; }
+.welcome-title { font-family: "TribalTimes", sans-serif; }
+
+.welcome-footer { text-align: center; }
+/*** END FONTS ***/
+
+/*** MEDIA ***/
+main { background-image: url("/assets/images/sample-background.png"); }
+	main {
+		background-repeat: repeat;
+		background-position: center;
+	}
+
+.welcome-bg { background-image: url("/assets/images/sample-background_transparent.png"); }
+	.welcome-bg {
+		filter: grayscale(100%);
+		opacity: .1;
+	}
+/*** END MEDIA ***/
+
+/*** COMPONENTS ***/
+	/*** COMMONS ***/
+	
+	/*** .welcome ***/
+	.welcome-wrap,
+	.welcome-samples-wrap { display: flex; }
+	.welcome-wrap { align-items: center; }
+	.welcome-samples-wrap { align-items: flex-end; }
+	.welcome-samples-wrap { justify-content: center; }
+	.welcome-wrap { flex-direction: column; }
+	.welcome-samples { flex: 1; }
+	
+	.welcome {
+		position: relative;
+		width: 100%; height: 100%;
+		padding-top: 1em;
+		border-width: .19em .19em 0 .19em; border-style: solid;
+	}
+		.welcome-wrap { width: 100%; height: 100%; }
+		.welcome-bg {
+			position: absolute; top: 0; left: 0;
+			width: 100%; height: 100%;
+		}
+		
+	.welcome-footer {
+		width: 100%;
+		padding: .25em 1em;
+	}
+		
+	.welcome-links {
+//		padding: .5em;
+	}
+	.welcome-links-a {
+		padding: .25em .5em;
+		margin: .5em;
+	}
+	
+	.welcome-samples {
+		width: 100%; height: 100%;
+		overflow: auto;
+	}
+	.welcome-samples-wrap {
+		position: relative;
+		width: 100%; height: 100%;
+		overflow: hidden;
+	}
+	.welcome-samples-img {
+		position: relative;
+	}
+		.welcome-samples-img.is-product1 { rotate: 5deg; }
+		.welcome-samples-img.is-product3 { rotate: -5deg; }
+/*** END COMPONENTS ***/
+
+/*** MEDIA-QUERIES ***/
+@media screen and (max-width: 50em) {
+	html, body, main { font-size: 14px; }
+
+	.welcome-title { font-size: 3em; }
+	.welcome-links { font-size: 1.19em; }
+	
+	main { padding: 3em; padding-bottom: 0; }
+	
+	/*** .welcome ***/
+	.welcome-samples-img { width: 50%; height: auto; }
+	.welcome-samples-img.is-product1,
+	.welcome-samples-img.is-product3 { position: absolute; bottom: -1.9em; }
+		.welcome-samples-img.is-product1 { left: -1.9em; }
+		.welcome-samples-img.is-product3 { right: -1.9em; }
+	.welcome-samples-img.is-product2 { }
+}
+@media screen and (min-width: 50em) {
+	html, body, main { font-size: 16px; }
+
+	.welcome-title { font-size: 7em; }
+	.welcome-links { font-size: 1.9em; }
+	
+	main { padding: 7em; padding-bottom: 0; }
+	
+	/*** .welcome ***/
+	.welcome-samples-img { width: auto;// height: 90%; }
+	.welcome-samples-img.is-product1,
+	.welcome-samples-img.is-product3 { height: 107%; top: 1.9em; }
+		.welcome-samples-img.is-product1 { left: 3em; }
+		.welcome-samples-img.is-product3 { left: -3em; }
+	.welcome-samples-img.is-product2 { height: 80%; }
+}
+/*** END MEDIA-QUERIES ***/
+
+/*** CSS-HACKS ***/
+/*** CSS-HACKS ***/
