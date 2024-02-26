@@ -43,9 +43,13 @@ main { background-image: url("/assets/images/sample-background.png"); }
 
 .welcome-bg { background-image: url("/assets/images/sample-background_transparent.png"); }
 	.welcome-bg {
-		filter: grayscale(100%);
-		opacity: .1;
+//		background-position: center;
 	}
+
+.welcome-bg {
+	filter: grayscale(100%);
+	opacity: .1;
+}
 /*** END MEDIA ***/
 
 /*** COMPONENTS ***/
@@ -62,11 +66,9 @@ main { background-image: url("/assets/images/sample-background.png"); }
 	
 	.welcome {
 		position: relative;
-		width: 100%; height: 100%;
 		padding-top: 1em;
 		border-width: .19em .19em 0 .19em; border-style: solid;
 	}
-		.welcome-wrap { width: 100%; height: 100%; }
 		.welcome-bg {
 			position: absolute; top: 0; left: 0;
 			width: 100%; height: 100%;
@@ -108,9 +110,18 @@ main { background-image: url("/assets/images/sample-background.png"); }
 	.welcome-title { font-size: 3em; }
 	.welcome-links { font-size: 1.19em; }
 	
+	/*** COMMONS ***/
+	main { display: flex; }
+	main { flex-direction: column; }
+	main { align-items: flex-end; }
+	main { justify-content: center; }
 	main { padding: 3em; padding-bottom: 0; }
 	
 	/*** .welcome ***/
+	.welcome,
+	.welcome-wrap { width: 100%; }
+	.welcome { overflow: auto; }
+	.welcome-samples-wrap { min-height: 60vw; }
 	.welcome-samples-img { width: 50%; height: auto; }
 	.welcome-samples-img.is-product1,
 	.welcome-samples-img.is-product3 { position: absolute; bottom: -1.9em; }
@@ -124,9 +135,13 @@ main { background-image: url("/assets/images/sample-background.png"); }
 	.welcome-title { font-size: 7em; }
 	.welcome-links { font-size: 1.9em; }
 	
+	/*** COMMONS ***/
 	main { padding: 7em; padding-bottom: 0; }
 	
 	/*** .welcome ***/
+	.welcome,
+	.welcome-wrap { width: 100%; height: 100%; }
+		
 	.welcome-samples-img { width: auto;// height: 90%; }
 	.welcome-samples-img.is-product1,
 	.welcome-samples-img.is-product3 { height: 107%; top: 1.9em; }
@@ -138,3 +153,6 @@ main { background-image: url("/assets/images/sample-background.png"); }
 
 /*** CSS-HACKS ***/
 /*** CSS-HACKS ***/
+
+/*** TO-DELETE ***/
+/*** END TO-DELETE ***/
